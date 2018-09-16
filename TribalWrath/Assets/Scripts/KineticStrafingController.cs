@@ -1,0 +1,47 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class KineticStrafingController : MonoBehaviour {
+    KineticStrafing strafing;
+
+    [Tooltip("How fast to move an object")]
+    public float moveSpeed = 1;
+
+    // Use this for initialization
+    void Start () {
+        strafing = new KineticStrafing();
+        strafing.Direction = Vector3.zero;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        UpdateInput();
+
+        //For Designers
+        strafing.Speed = moveSpeed;
+
+        this.gameObject.transform.position += new Vector3(strafing.UpdateMoveAcceleration().x, strafing.UpdateMoveAcceleration().y, strafing.UpdateMoveAcceleration().z);
+	}
+    public void UpdateInput()
+    {
+        strafing.Direction = Vector3.zero;
+        if (KeyboardInputUtil.IsHoldingKey(KeyCode.W))
+        {
+            strafing.Direction += new Vector3(0, 0, 1);
+        }
+        if (KeyboardInputUtil.IsHoldingKey(KeyCode.D))
+        {
+            strafing.Direction += new Vector3(1, 0, 0);
+        }
+        if (KeyboardInputUtil.IsHoldingKey(KeyCode.S))
+        {
+            strafing.Direction += new Vector3(0, 0, -1);
+        }
+        if (KeyboardInputUtil.IsHoldingKey(KeyCode.A))
+        {
+            strafing.Direction += new Vector3(-1, 0, 0);
+        }
+        strafing.Direction.Normalize();
+    }
+}
