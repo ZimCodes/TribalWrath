@@ -20,7 +20,7 @@ public class JumpController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         UpdateJumpInput();
 
         //For Designers
