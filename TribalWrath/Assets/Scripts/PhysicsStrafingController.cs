@@ -19,7 +19,7 @@ public class PhysicsStrafingController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         UpdateInput();
         //For Designers
         strafing.Power = Force;
