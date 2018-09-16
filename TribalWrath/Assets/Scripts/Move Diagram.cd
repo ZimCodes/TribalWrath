@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JumpController">
+    <Position X="12.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAACAAAAAACAAAIAAAAAAAAEAMAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\JumpController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jumping" BaseTypeListCollapsed="true">
+    <Position X="12" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAgIAAAAAQAAAACAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Jumping.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="KeyboardInputUtil">
+    <Position X="13.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAABAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\KeyboardInputUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KineticStrafing">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\KineticStrafing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KineticStrafingController">
+    <Position X="9.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAECAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\KineticStrafingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhysicsStrafing">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PhysicsStrafing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhysicsStrafingController">
+    <Position X="2.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAQAAAAAAAAAAAAAAAABAAIgAA=</HashCode>
+      <FileName>Assets\Scripts\PhysicsStrafingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strafing">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Strafing.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="IMovement">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\IMovement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
