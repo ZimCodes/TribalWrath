@@ -160,12 +160,17 @@ Prefab:
     - target: {fileID: 114336804298840842, guid: 59bd6b6e9b272f74c89b1710289d6a11,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114336804298840842, guid: 59bd6b6e9b272f74c89b1710289d6a11,
         type: 2}
       propertyPath: moveSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114795222558692342, guid: 59bd6b6e9b272f74c89b1710289d6a11,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59bd6b6e9b272f74c89b1710289d6a11, type: 2}
@@ -288,8 +293,8 @@ GameObject:
   - component: {fileID: 1961260438}
   - component: {fileID: 1961260437}
   - component: {fileID: 1961260436}
-  - component: {fileID: 1961260439}
   - component: {fileID: 1961260440}
+  - component: {fileID: 1961260439}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -351,7 +356,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1961260435}
   m_LocalRotation: {x: 0.120555006, y: -0, z: -0, w: 0.99270666}
-  m_LocalPosition: {x: 0, y: 2.22, z: -10}
+  m_LocalPosition: {x: 0, y: 2.22, z: -9.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -365,10 +370,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1961260435}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8cf0f8e7725084994f97daab09705a, type: 3}
+  m_Script: {fileID: 11500000, guid: 728d54f16bc99ba46afc2ee6c3898e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 142146268}
+  target: {fileID: 142146268}
+  CameraRotationSpeed: 5
+  lookAtObject: 1
+  ActivateRotation: 1
+  follow: 1
 --- !u!114 &1961260440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +386,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1961260435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d63b3af1fcfe684fa504936fb9f2928, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec021329247a8c41a6bb3db14be4088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 142146268}
+  CameraRotationSpeed: 5
+  lookAtObject: 1
+  ActivateRotation: 1
+  follow: 1

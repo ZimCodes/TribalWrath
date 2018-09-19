@@ -309,22 +309,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\IMovement.cs" />
-    <Compile Include="Assets\Scripts\InputUtil.cs" />
-    <Compile Include="Assets\Scripts\JumpController.cs" />
-    <Compile Include="Assets\Scripts\Jumping.cs" />
-    <Compile Include="Assets\Scripts\KeyboardInputUtil.cs" />
-    <Compile Include="Assets\Scripts\KineticStrafing.cs" />
-    <Compile Include="Assets\Scripts\KineticStrafingController.cs" />
-    <Compile Include="Assets\Scripts\MouseHandler.cs" />
-    <Compile Include="Assets\Scripts\OverShoulderCamera.cs" />
-    <Compile Include="Assets\Scripts\PhysicsStrafing.cs" />
-    <Compile Include="Assets\Scripts\PhysicsStrafingController.cs" />
-    <Compile Include="Assets\Scripts\Strafing.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraRotate.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraRotateAroundObject.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraRotateObject.cs" />
+    <Compile Include="Assets\Scripts\Camera\ICameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\CameraRotateAndFollowObjectController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\JumpController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\KineticStrafingController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\PhysicsStrafingController.cs" />
+    <Compile Include="Assets\Scripts\Movement\IMovement.cs" />
+    <Compile Include="Assets\Scripts\Movement\Jumping.cs" />
+    <Compile Include="Assets\Scripts\Movement\KeyboardInputUtil.cs" />
+    <Compile Include="Assets\Scripts\Movement\KineticStrafing.cs" />
+    <Compile Include="Assets\Scripts\Movement\PhysicsStrafing.cs" />
+    <Compile Include="Assets\Scripts\Movement\Strafing.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Scripts\Move Diagram.cd" />
+    <None Include="Assets\Scripts\UML\CameraDiagram.cd" />
+    <None Include="Assets\Scripts\UML\Move Diagram.cd" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
