@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CameraFollow">
+    <Position X="2" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraFollow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraMovement">
+    <Position X="3.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAIAAAAAAIAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraMovement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CameraRotate">
+    <Position X="5.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAAAAAAIAAAIgAAAABAAAAQAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraRotate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraController">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAiBAAAAAIAAAIAAAAAAAAAAAABIAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraRotateAroundObject">
+    <Position X="6.75" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraRotateAroundObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraRotateObject">
+    <Position X="3.5" Y="7.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAgAAAAAAAAAAIAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\CameraRotateObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraRotateAndFollowObjectController">
+    <Position X="10" Y="1.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACBAAAAAIAAAIgAAAAAAAAAAABIAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CameraRotateAndFollowObjectController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ICameraMovement">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAIAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ICameraMovement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
