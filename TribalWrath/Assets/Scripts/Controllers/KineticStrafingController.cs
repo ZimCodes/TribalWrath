@@ -16,32 +16,34 @@ public class KineticStrafingController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        UpdateInput();
+
+        UpdateDirectionInput();
 
         //For Designers
         strafing.Speed = moveSpeed;
 
-        this.gameObject.transform.position += new Vector3(strafing.UpdateMoveAcceleration().x, strafing.UpdateMoveAcceleration().y, strafing.UpdateMoveAcceleration().z);
+        this.strafing.UpdateMovement(gameObject);
 	}
-    public void UpdateInput()
+    public void UpdateDirectionInput()
     {
         strafing.Direction = Vector3.zero;
+
         if (KeyboardInputUtil.IsHoldingKey(KeyCode.W))
         {
-            strafing.Direction += new Vector3(0, 0, 1);
-        }
-        if (KeyboardInputUtil.IsHoldingKey(KeyCode.D))
-        {
-            strafing.Direction += new Vector3(1, 0, 0);
+            strafing.Direction = new Vector3(0, 0, 1);
         }
         if (KeyboardInputUtil.IsHoldingKey(KeyCode.S))
         {
-            strafing.Direction += new Vector3(0, 0, -1);
+            strafing.Direction = new Vector3(0, 0, -1);
         }
         if (KeyboardInputUtil.IsHoldingKey(KeyCode.A))
         {
-            strafing.Direction += new Vector3(-1, 0, 0);
+            strafing.Direction = new Vector3(-1, 0, 0);
         }
-        strafing.Direction.Normalize();
+        if (KeyboardInputUtil.IsHoldingKey(KeyCode.D))
+        {
+            strafing.Direction = new Vector3(1, 0, 0);
+        }
     }
+    
 }
