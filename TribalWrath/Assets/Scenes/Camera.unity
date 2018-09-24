@@ -160,17 +160,17 @@ Prefab:
     - target: {fileID: 114336804298840842, guid: 59bd6b6e9b272f74c89b1710289d6a11,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114336804298840842, guid: 59bd6b6e9b272f74c89b1710289d6a11,
         type: 2}
       propertyPath: moveSpeed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114795222558692342, guid: 59bd6b6e9b272f74c89b1710289d6a11,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59bd6b6e9b272f74c89b1710289d6a11, type: 2}

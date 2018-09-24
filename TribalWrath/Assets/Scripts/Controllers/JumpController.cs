@@ -28,7 +28,7 @@ public class JumpController : MonoBehaviour {
         jump.jumpHeight = jumpHeight;
 
         jump.UpdateJumpMovement(forceMode);
-        MaximumjumpHeightCheck();
+        jump.MaximumjumpHeightCheck(this.gameObject);
 	}
     private void UpdateJumpInput()
     {
@@ -40,13 +40,7 @@ public class JumpController : MonoBehaviour {
         }
         jump.Direction.Normalize();
     }
-    private void MaximumjumpHeightCheck()
-    {
-        if (this.transform.position.y >= jumpHeight)
-        {
-            jump.Direction = Vector3.zero;
-        }
-    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.contacts.Length > 0)
