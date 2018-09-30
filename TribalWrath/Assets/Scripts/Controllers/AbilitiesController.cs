@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AbilitiesController : MonoBehaviour {
-    private AbilityState ability = AbilityState.HighJump;
+    private AbilityState ability = AbilityState.Normal;
     [Tooltip("Go to the Unity Documentation for more details")]
     public ForceMode forceMode = ForceMode.Force;
     public ForceMode highJumpForceMode = ForceMode.Force;
@@ -11,10 +11,11 @@ public class AbilitiesController : MonoBehaviour {
 
     [Tooltip("Amount of Force Required to Jump")]
     public float jumpForce = 12;
-    public float highJumpForce = 12;
-
     [Tooltip("Maximum Height to jump before descending")]
     public float jumpHeight = 5;
+    [Tooltip("Amount of Force Required to HIGH Jump")]
+    public float highJumpForce = 12;
+    [Tooltip("Maximum Height to HIGH Jump before descending")]
     public float highJumpHeight = 5;
     // Use this for initialization
     void Start()
@@ -52,27 +53,30 @@ public class AbilitiesController : MonoBehaviour {
     {
         switch (ability)
         {
+            case AbilityState.Normal:
+                RegularJump(jumpForce, jumpHeight, forceMode);
+                break;
             case AbilityState.HighJump:
-                UpdateJumpInput();
-
-                //For Designers
-                jump.jumpPower = highJumpForce;
-                jump.jumpHeight = highJumpHeight;
-                jump.UpdateJumpMovement(forceMode);
+                RegularJump(highJumpForce, highJumpHeight, highJumpForceMode);
                 break;
             case AbilityState.AcidSpit:
-                UpdateJumpInput();
+                //TODO: Enter code for projectile ability below
 
-                //For Designers
-                jump.jumpPower = jumpForce;
-                jump.jumpHeight = jumpHeight;
-                jump.UpdateJumpMovement(highJumpForceMode);
+                RegularJump(jumpForce,jumpHeight,forceMode);
                 break;
             default:
-                ability = AbilityState.HighJump;
+                ability = AbilityState.Normal;
                 break;
         }
         jump.MaximumjumpHeightCheck(this.gameObject);
+    }
+    private void RegularJump(float _jumpforce,float _jumpheight, ForceMode _forceMode)
+    {
+        UpdateJumpInput();
+
+        jump.jumpPower = _jumpforce;
+        jump.jumpHeight = _jumpheight;
+        jump.UpdateJumpMovement(_forceMode);
     }
     private void OnCollisionEnter(Collision collision)
     {

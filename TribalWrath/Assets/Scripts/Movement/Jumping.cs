@@ -16,7 +16,7 @@ public class Jumping : Abilities, IMovement
 
     public void UpdateJumpMovement(ForceMode forceMode)
     {
-        rigidbody.AddForce(Direction * jumpPower * Time.deltaTime);
+        rigidbody.AddForce(Direction * jumpPower);
     }
     public void MaximumjumpHeightCheck(GameObject gameObject)
     {
