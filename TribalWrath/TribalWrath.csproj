@@ -329,7 +329,6 @@
     <Compile Include="Assets\Scripts\Movement\KineticStrafing.cs" />
     <Compile Include="Assets\Scripts\Movement\PhysicsStrafing.cs" />
     <Compile Include="Assets\Scripts\Movement\Strafing.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UML\AbilityDiagram.cd" />

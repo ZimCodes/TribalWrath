@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum AbilityState { HighJump,AcidSpit };
+public enum AbilityState { Normal, HighJump, AcidSpit};
 
 public class Abilities : IAbilities
 {
