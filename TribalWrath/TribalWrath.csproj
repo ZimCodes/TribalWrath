@@ -323,6 +323,7 @@
     <Compile Include="Assets\Scripts\Controllers\JumpController.cs" />
     <Compile Include="Assets\Scripts\Controllers\KineticStrafingController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PhysicsStrafingController.cs" />
+    <Compile Include="Assets\Scripts\Light\LightSwitch.cs" />
     <Compile Include="Assets\Scripts\Movement\IMovement.cs" />
     <Compile Include="Assets\Scripts\Movement\Jumping.cs" />
     <Compile Include="Assets\Scripts\Movement\KeyboardInputUtil.cs" />
