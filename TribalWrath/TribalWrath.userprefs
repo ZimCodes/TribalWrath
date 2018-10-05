@@ -1,8 +1,10 @@
-﻿<Properties StartupItem="TribalWrath.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\KineticStrafingController.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AcidSpit\AcidSpit.cs">
     <Files>
-      <File FileName="Assets\Scripts\KineticStrafingController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AcidSpit\AcidSpit.cs" Line="18" Column="18" />
+      <File FileName="Assets\Scripts\Crosshair\Crosshair.cs" Line="25" Column="5" />
+      <File FileName="Assets\Scripts\Movement\KeyboardInputUtil.cs" Line="29" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
