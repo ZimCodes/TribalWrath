@@ -311,11 +311,17 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Abilities\Abilities.cs" />
     <Compile Include="Assets\Scripts\Abilities\IAbilities.cs" />
+    <Compile Include="Assets\Scripts\AcidSpit\AcidSpitPooler.cs" />
+    <Compile Include="Assets\Scripts\AcidSpit\AcidSpitTest.cs" />
+    <Compile Include="Assets\Scripts\AcidSpit\IObjectPoolItem.cs" />
+    <Compile Include="Assets\Scripts\AcidSpit\ObjectPooler.cs" />
+    <Compile Include="Assets\Scripts\AcidSpit\TriggerAcidSpit.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraRotate.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraRotateAroundObject.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraRotateObject.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraRotateVertical.cs" />
     <Compile Include="Assets\Scripts\Camera\ICameraMovement.cs" />
     <Compile Include="Assets\Scripts\Controllers\AbilitiesController.cs" />
     <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
@@ -323,13 +329,15 @@
     <Compile Include="Assets\Scripts\Controllers\JumpController.cs" />
     <Compile Include="Assets\Scripts\Controllers\KineticStrafingController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PhysicsStrafingController.cs" />
+    <Compile Include="Assets\Scripts\Crosshair\Crosshair.cs" />
     <Compile Include="Assets\Scripts\Light\LightSwitch.cs" />
     <Compile Include="Assets\Scripts\Movement\IMovement.cs" />
     <Compile Include="Assets\Scripts\Movement\Jumping.cs" />
-    <Compile Include="Assets\Scripts\Movement\KeyboardInputUtil.cs" />
     <Compile Include="Assets\Scripts\Movement\KineticStrafing.cs" />
     <Compile Include="Assets\Scripts\Movement\PhysicsStrafing.cs" />
     <Compile Include="Assets\Scripts\Movement\Strafing.cs" />
+    <Compile Include="Assets\Scripts\Util\KeyboardInputUtil.cs" />
+    <Compile Include="Assets\Scripts\Util\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UML\AbilityDiagram.cd" />

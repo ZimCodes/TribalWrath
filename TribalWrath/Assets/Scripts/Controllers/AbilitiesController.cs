@@ -5,13 +5,14 @@ using UnityEngine;
 public class AbilitiesController : MonoBehaviour {
     [Tooltip("The Type of Light you would like to use for the Owl ability.")]
     public Light lightObject;
-    
+
     private AbilityState ability = AbilityState.Normal;
     [Tooltip("Go to the Unity Documentation for more details")]
     public ForceMode forceMode = ForceMode.Force;
     public ForceMode highJumpForceMode = ForceMode.Force;
     Jumping jump;
     LightSwitch light;
+
     [Tooltip("Amount of Force Required to Jump")]
     public float jumpForce = 12;
     [Tooltip("Maximum Height to jump before descending")]
@@ -19,13 +20,15 @@ public class AbilitiesController : MonoBehaviour {
     [Tooltip("Amount of Force Required to HIGH Jump")]
     public float highJumpForce = 12;
     [Tooltip("Maximum Height to HIGH Jump before descending")]
-    public float highJumpHeight = 5;
+    public float highJumpHeight = 8;
     // Use this for initialization
     void Start()
     {
         jump = new Jumping();
         jump.rigidbody = GetComponent<Rigidbody>();
-
+        jump.savedJumpHeight = jumpHeight;
+        jump.savedHighJumpHeight = jump.highJumpHeight = highJumpHeight;
+        
         light = new LightSwitch(lightObject);
         light.Start();
     }
@@ -34,6 +37,9 @@ public class AbilitiesController : MonoBehaviour {
     void FixedUpdate()
     {
         InputSwitchAbilities();
+        Debug.Log("Jump Height: " + jump.jumpHeight);
+        Debug.Log("HighJump Height: " + jump.highJumpHeight);
+        Debug.Log("Ability: " + ability);
     }
     private void LateUpdate()
     {
@@ -72,34 +78,35 @@ public class AbilitiesController : MonoBehaviour {
         {
             case AbilityState.Normal:
                 light.state = LightState.LightOff;
-                RegularJump(jumpForce, jumpHeight, forceMode);
+                RegularJump(jumpForce, forceMode);
                 break;
             case AbilityState.HighJump:
                 
-                RegularJump(highJumpForce, highJumpHeight, highJumpForceMode);
+                RegularJump(highJumpForce, highJumpForceMode);
                 break;
             case AbilityState.AcidSpit:
                 //TODO: Enter code for projectile ability below
 
-                RegularJump(jumpForce,jumpHeight,forceMode);
+                RegularJump(jumpForce, forceMode);
                 break;
             case AbilityState.OwlSight:
                 light.state = LightState.LightOn;
-                RegularJump(jumpForce, jumpHeight, forceMode);
+                RegularJump(jumpForce, forceMode);
                 break;
             default:
                 ability = AbilityState.Normal;
                 break;
         }
-        jump.MaximumjumpHeightCheck(this.gameObject);
+        jump.MaximumjumpHeightCheck(this.gameObject,ability);
     }
-    private void RegularJump(float _jumpforce,float _jumpheight, ForceMode _forceMode)
+    private void RegularJump(float _jumpforce, ForceMode _forceMode)
     {
         UpdateJumpInput();
 
         jump.jumpPower = _jumpforce;
-        jump.jumpHeight = _jumpheight;
         jump.UpdateJumpMovement(_forceMode);
+        
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -107,6 +114,7 @@ public class AbilitiesController : MonoBehaviour {
         {
             jump.isJumping = false;
             Debug.Log("Not Jumping");
+            jump.newJumpHeight(this.gameObject,ability);
         }
     }
 }

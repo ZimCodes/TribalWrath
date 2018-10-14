@@ -6,17 +6,21 @@ public class CameraController : MonoBehaviour {
 
     CameraRotateObject cameraRotate;
     CameraFollow cameraFollow;
+    CameraRotateVertical cameraRotVertical;
 
     public GameObject target;
-    public float CameraRotationSpeed = 5.0f;
-    public bool lookAtObject = true, ActivateRotation = true, follow = true;
+    public float CameraRotationXSpeed = 5.0f;
+    public float CameraRotationYSpeed = 1.0f;
+    public bool lookAtObject = true, ActivateRotation = true, follow = true, verticalcontrol = true;
     // Use this for initialization
     void Start () {
         cameraRotate = new CameraRotateObject(target);
         cameraFollow = new CameraFollow(target);
+        cameraRotVertical = new CameraRotateVertical(target);
 
         cameraFollow.Start(this.transform);
         cameraRotate.Start(this.transform);
+        cameraRotVertical.Start(this.transform);
     }
 	
 	// Update is called once per frame
@@ -28,14 +32,22 @@ public class CameraController : MonoBehaviour {
         if (ActivateRotation)
         {
             //For Designers
-            cameraRotate.CameraRotationSpeed = CameraRotationSpeed;
-            cameraRotate.targetRotationSpeed = CameraRotationSpeed;
+            cameraRotate.CameraRotationSpeed = CameraRotationXSpeed;
+            cameraRotate.targetRotationSpeed = CameraRotationXSpeed;
             cameraRotate.RotateDirection = Input.GetAxis("Mouse X");
             cameraRotate.LateUpdate(this.transform);
+        }
+        if (verticalcontrol)
+        {
+            cameraRotVertical.CameraRotationSpeed = CameraRotationYSpeed;
+            cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y");
+            cameraRotVertical.LateUpdate(this.transform);
         }
         if (lookAtObject)
         {
             cameraRotate.LookAtObject(this.transform);
         }
+        
+
     }
 }

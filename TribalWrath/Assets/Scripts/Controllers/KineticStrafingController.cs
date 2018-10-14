@@ -20,7 +20,7 @@ public class KineticStrafingController : MonoBehaviour {
         UpdateDirectionInput();
 
         //For Designers
-        strafing.Speed = moveSpeed;
+        strafing.Speed = UpdateMoveSpeed(moveSpeed);
 
         this.strafing.UpdateMovement(gameObject);
 	}
@@ -30,20 +30,27 @@ public class KineticStrafingController : MonoBehaviour {
 
         if (KeyboardInputUtil.IsHoldingKey(KeyCode.W))
         {
-            strafing.Direction = new Vector3(0, 0, 1);
+            strafing.Direction += new Vector3(0, 0, 1);
         }
         if (KeyboardInputUtil.IsHoldingKey(KeyCode.S))
         {
-            strafing.Direction = new Vector3(0, 0, -1);
+            strafing.Direction += new Vector3(0, 0, -1);
         }
         if (KeyboardInputUtil.IsHoldingKey(KeyCode.A))
         {
-            strafing.Direction = new Vector3(-1, 0, 0);
+            strafing.Direction += new Vector3(-1, 0, 0);
         }
         if (KeyboardInputUtil.IsHoldingKey(KeyCode.D))
         {
-            strafing.Direction = new Vector3(1, 0, 0);
+            strafing.Direction += new Vector3(1, 0, 0);
         }
     }
-    
+    public float UpdateMoveSpeed(float _speed)
+    {
+        if (strafing.Direction == new Vector3(1,0,1) || strafing.Direction == new Vector3(1, 0, -1) || strafing.Direction == new Vector3(-1, 0, 1) || strafing.Direction == new Vector3(-1, 0, -1))
+        {
+            return _speed * 2/ 3;
+        }
+        return _speed;
+    }
 }
