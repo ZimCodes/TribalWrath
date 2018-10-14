@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AcidSpit : MonoBehaviour {
+public class AcidSpitTest : MonoBehaviour {
 
 	GameObject prefab;
 
@@ -31,8 +31,8 @@ public class AcidSpit : MonoBehaviour {
 			GameObject spit = Instantiate (prefab) as GameObject;
 			spit.transform.position = transform.position + Camera.main.transform.forward * 1;
 			Rigidbody rb = spit.GetComponent<Rigidbody> ();
-			rb.velocity = Camera.main.transform.forward * 10;
-
-		}
+            rb.velocity = Camera.main.transform.forward * 10;
+        }
+        
 	}
 }

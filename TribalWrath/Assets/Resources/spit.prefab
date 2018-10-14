@@ -23,13 +23,14 @@ GameObject:
   - component: {fileID: 23624744532537800}
   - component: {fileID: 135896961198964042}
   - component: {fileID: 54014035869643108}
+  - component: {fileID: 114827008412822180}
   m_Layer: 0
   m_Name: spit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4217697753704568
 Transform:
   m_ObjectHideFlags: 1
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1928741295262556}
   m_LocalRotation: {x: -0, y: -0.7192259, z: -0, w: 0.69477636}
-  m_LocalPosition: {x: -1.9251457, y: 4.1632536e-17, z: -5.2187805}
+  m_LocalPosition: {x: -0.71931994, y: 0.14874297, z: -0.6143129}
   m_LocalScale: {x: 1.1175499, y: 1.0384172, z: 0.95105827}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,6 +101,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114827008412822180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928741295262556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71fe596ba3cb3174a9a279f2efb4ac9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToCollideWithAcidSpit: Enemy
 --- !u!135 &135896961198964042
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -107,7 +120,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1928741295262556}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

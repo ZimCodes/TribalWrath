@@ -26,7 +26,8 @@ public class CameraRotate : CameraMovement {
     }
     public void LookAtObject(Transform cameraTransform)
     {
-        cameraTransform.LookAt(targetObject.transform.position);
+        cameraTransform.eulerAngles = new Vector3(cameraTransform.localRotation.eulerAngles.x, targetObject.transform.localRotation.eulerAngles.y, cameraTransform.localRotation.eulerAngles.z);
+        //cameraTransform.LookAt(targetObject.transform.position);
     }
     protected void MaintainCameraDistanceWhileRotating()
     {
