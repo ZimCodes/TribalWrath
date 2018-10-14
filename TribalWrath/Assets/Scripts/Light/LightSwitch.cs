@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 public enum LightState {LightOn,LightOff};
-public class LightSwitch {
+public class LightSwitch : Abilities {
     public LightState state;
     private Light light;
     public LightSwitch(Light _light)
     {
+        Ability = AbilityState.OwlSight;
         light = _light;
     }
     public void Start()

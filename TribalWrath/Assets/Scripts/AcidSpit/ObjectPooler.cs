@@ -16,7 +16,7 @@ public class ObjectPooler : MonoBehaviour {
     /// <param name="_poolstartamount">Amount of objects to add to the pool in the beginning.</param>
     public void InitializePool () {
         objcontainer = new List<GameObject>();
-        GameObject obj = Instantiate(recycleObject);
+        GameObject obj = recycleObject;
         obj.SetActive(false);
         objcontainer.Add(obj);
 	}

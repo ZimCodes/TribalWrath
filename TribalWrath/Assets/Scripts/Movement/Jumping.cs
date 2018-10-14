@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Jumping : Abilities, IMovement
 {
-    public Vector3 Direction { get; set; }
-    public Rigidbody rigidbody { get; set; }
+    //public Vector3 Direction { get; set; }
+    //public Rigidbody rigidbody { get; set; }
     public float jumpPower,jumpHeight,highJumpHeight, savedJumpHeight,savedHighJumpHeight;
     public bool isJumping;
     public Jumping()

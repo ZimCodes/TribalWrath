@@ -9,19 +9,33 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AbilitiesController">
-    <Position X="8" Y="0.5" Width="1.5" />
+    <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAiAAAAAACAAAIAAAAAAAAEAIAAAABAAAAAA=</HashCode>
+      <HashCode>EAAiAAAAAiAAAAAACAJAYAAACAIAAEAIAAAABAgAAEA=</HashCode>
       <FileName>Assets\Scripts\Controllers\AbilitiesController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Jumping">
-    <Position X="2.5" Y="4.25" Width="1.5" />
+    <Position X="2" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAgIAAAAAQAAAACAAIAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>EEAIAgIAAAAAQAAAACAEIAAAgAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Movement\Jumping.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AcidSpit">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAjAAAAAABAAAAACAAAAAAAAAAAADABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AcidSpit\AcidSpit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LightSwitch">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAAAAAAAAAAIAAAAAIAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Light\LightSwitch.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="IAbilities">
     <Position X="4.5" Y="0.5" Width="1.5" />
@@ -33,8 +47,15 @@
   <Enum Name="AbilityState">
     <Position X="2" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAAAAABAAABAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Abilities\Abilities.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LightState">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Light\LightSwitch.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
