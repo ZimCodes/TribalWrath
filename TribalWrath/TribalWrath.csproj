@@ -335,6 +335,8 @@
     <Compile Include="Assets\Scripts\Programmers\Controllers\PhysicsStrafing.cs" />
     <Compile Include="Assets\Scripts\Programmers\Controllers\SingleCameraController.cs" />
     <Compile Include="Assets\Scripts\Programmers\Light\LightSwitch.cs" />
+    <Compile Include="Assets\Scripts\Programmers\MouseShrink.cs" />
+    <Compile Include="Assets\Scripts\Programmers\MouseShrinkController.cs" />
     <Compile Include="Assets\Scripts\Programmers\Movement\IMovement.cs" />
     <Compile Include="Assets\Scripts\Programmers\Movement\Jumping.cs" />
     <Compile Include="Assets\Scripts\Programmers\Movement\KineticStrafing.cs" />
