@@ -291,6 +291,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
+      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
+      <Name>UnityEditor.StandardEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.PackageManagerUI.Editor.csproj">
       <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
       <Name>Unity.PackageManagerUI.Editor</Name>
@@ -299,46 +307,40 @@
       <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
-      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
-      <Name>UnityEditor.StandardEvents</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Abilities\Abilities.cs" />
-    <Compile Include="Assets\Scripts\Abilities\IAbilities.cs" />
-    <Compile Include="Assets\Scripts\AcidSpit\AcidSpit.cs" />
-    <Compile Include="Assets\Scripts\AcidSpit\AcidSpitPooler.cs" />
-    <Compile Include="Assets\Scripts\AcidSpit\AcidSpitTest.cs" />
-    <Compile Include="Assets\Scripts\AcidSpit\IObjectPoolItem.cs" />
-    <Compile Include="Assets\Scripts\AcidSpit\ObjectPooler.cs" />
-    <Compile Include="Assets\Scripts\AcidSpit\TriggerAcidSpit.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraRotate.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraRotateAroundObject.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraRotateObject.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraRotateVertical.cs" />
-    <Compile Include="Assets\Scripts\Camera\ICameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Controllers\AbilitiesController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\CameraRotateAndFollowObjectController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\JumpController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\KineticStrafingController.cs" />
-    <Compile Include="Assets\Scripts\Controllers\PhysicsStrafingController.cs" />
-    <Compile Include="Assets\Scripts\Crosshair\Crosshair.cs" />
-    <Compile Include="Assets\Scripts\Light\LightSwitch.cs" />
-    <Compile Include="Assets\Scripts\Movement\IMovement.cs" />
-    <Compile Include="Assets\Scripts\Movement\Jumping.cs" />
-    <Compile Include="Assets\Scripts\Movement\KineticStrafing.cs" />
-    <Compile Include="Assets\Scripts\Movement\PhysicsStrafing.cs" />
-    <Compile Include="Assets\Scripts\Movement\Strafing.cs" />
-    <Compile Include="Assets\Scripts\Util\KeyboardInputUtil.cs" />
-    <Compile Include="Assets\Scripts\Util\Timer.cs" />
+    <Compile Include="Assets\Scripts\Designers\EmptyObject\AbilitySwitch.cs" />
+    <Compile Include="Assets\Scripts\Designers\EmptyObject\ModelSwitch.cs" />
+    <Compile Include="Assets\Scripts\Designers\MainCamera\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Designers\MainCamera\OwlSightController.cs" />
+    <Compile Include="Assets\Scripts\Designers\Player\AcidSpitController.cs" />
+    <Compile Include="Assets\Scripts\Designers\Player\JumpController.cs" />
+    <Compile Include="Assets\Scripts\Designers\Player\KineticStrafingController.cs" />
+    <Compile Include="Assets\Scripts\Designers\Projectile\TriggerAcidSpit.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Abilities\Abilities.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Abilities\IAbilities.cs" />
+    <Compile Include="Assets\Scripts\Programmers\AcidSpit\AcidSpit.cs" />
+    <Compile Include="Assets\Scripts\Programmers\AcidSpit\AcidSpitTest.cs" />
+    <Compile Include="Assets\Scripts\Programmers\AcidSpit\IObjectPoolItem.cs" />
+    <Compile Include="Assets\Scripts\Programmers\AcidSpit\ObjectPooler.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Camera\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Camera\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Camera\CameraRotate.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Camera\CameraRotateAroundObject.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Camera\CameraRotateObject.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Camera\CameraRotateVertical.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Camera\ICameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Controllers\AcidSpitPooler.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Controllers\CameraRotateAndFollowObjectController.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Controllers\PhysicsStrafing.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Controllers\SingleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Light\LightSwitch.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Movement\IMovement.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Movement\Jumping.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Movement\KineticStrafing.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Movement\Strafing.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Util\KeyboardInputUtil.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Util\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\UML\AbilityDiagram.cd" />

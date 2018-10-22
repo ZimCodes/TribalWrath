@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Abilities.unity
+- path: Assets/Scenes/Switch.unity
   isLoaded: 1
   isActive: 1
