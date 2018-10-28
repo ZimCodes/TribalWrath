@@ -526,7 +526,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Space --> Jump
 
+
     NumPad Key 1 --> Small
+
 
     NumPad Key 2 --> Normal'
 --- !u!222 &1745582387
