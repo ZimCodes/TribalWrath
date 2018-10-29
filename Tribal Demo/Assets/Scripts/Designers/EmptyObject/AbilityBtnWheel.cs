@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public enum AbilityWheelUIState { Hidden,Visible};
+public enum AbilityWheelUIState { Hidden,Visible };
 public class AbilityBtnWheel : MonoBehaviour {
     private static AbilityWheelUIState abilitywheelstate;
     public static AbilityWheelUIState AbilityWheelState
@@ -47,7 +47,6 @@ public class AbilityBtnWheel : MonoBehaviour {
 
     private void Update()
     {
-        Debug.Log("Ability: " + Abilities.Ability);
         WheelActivation();
     }
     private void WheelActivation()

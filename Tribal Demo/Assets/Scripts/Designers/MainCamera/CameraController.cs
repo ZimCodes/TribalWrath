@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
     public GameObject target;
     public float CameraRotationXSpeed = 5.0f;
     public float CameraRotationYSpeed = 1.0f;
-    public bool lookAtObject = true, ActivateRotation = true, follow = true, verticalcontrol = true, invertedY = false;
+    public bool lookAtObject = true, ActivateRotation = true, follow = true, verticalcontrol = true, InvertY = false;
     // Use this for initialization
     void Start () {
         cameraRotate = new CameraRotateObject(target);
@@ -35,7 +35,6 @@ public class CameraController : MonoBehaviour {
             cameraRotate.targetObject = ModelSwitch.currentModel;
         }
         #endregion
-        Debug.Log(AbilityBtnWheel.AbilityWheelState);
         if (follow)
         {
             cameraFollow.LateUpdate(this.transform);
@@ -48,17 +47,13 @@ public class CameraController : MonoBehaviour {
             cameraRotate.RotateDirection = Input.GetAxis("Mouse X");
             cameraRotate.LateUpdate(this.transform);
         }
-        if (verticalcontrol && AbilityBtnWheel.AbilityWheelState == AbilityWheelUIState.Hidden)
+        if (verticalcontrol)
         {
             cameraRotVertical.CameraRotationSpeed = CameraRotationYSpeed;
-            if (invertedY)
-            {
-                cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y");
-            }
-            else
-            {
-                cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y") * -1;
-            }
+            cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y");
+            cameraRotVertical.VerticalRotation = (InvertY) ? Input.GetAxis("Mouse Y") : Input.GetAxis("Mouse Y") * -1;
+
+
             cameraRotVertical.LateUpdate(this.transform);
         }
         if (lookAtObject)
