@@ -7,7 +7,6 @@ public class KineticStrafingController : MonoBehaviour {
     [Tooltip("How fast to move an object")]
     public float moveSpeed = 1;
     Rigidbody rigidbody;
-
     // Use this for initialization
     void Start () {
         strafing = new KineticStrafing();
