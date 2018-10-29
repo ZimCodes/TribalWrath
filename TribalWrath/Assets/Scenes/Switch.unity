@@ -298,6 +298,11 @@ Prefab:
       propertyPath: lightObject
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 23878695967356608, guid: d2bd8bcca2fb88f419b3ab8c9ef4a529,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: d2bd8bcca2fb88f419b3ab8c9ef4a529, type: 2}
@@ -579,7 +584,7 @@ GameObject:
   m_Layer: 0
   m_Name: EmptyObject_Util
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -589,7 +594,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881426917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a0f125ecfe39304ca074d001e27b116, type: 3}
   m_Name: 
@@ -618,7 +623,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 881426917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1af573dd834eaa241804ee4442bb01d1, type: 3}
   m_Name: 
