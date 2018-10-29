@@ -28,10 +28,14 @@ public class AcidSpitController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         //For Designers
-        acidshooting.projectileSpeed = AcidSpeed;
-        acidshooting.cooldown = AcidCooldown;
-        acidshooting.verticalStartForProjectile = verticalStartForProjectile;
-        acidshooting.FixedUpdate(this.gameObject);
+        if (AbilityBtnWheel.AbilityWheelState == AbilityWheelUIState.Hidden)
+        {
+            acidshooting.projectileSpeed = AcidSpeed;
+            acidshooting.cooldown = AcidCooldown;
+            acidshooting.verticalStartForProjectile = verticalStartForProjectile;
+            acidshooting.FixedUpdate(this.gameObject);
+        }
+        
     }
     private GameObject RenamingProjectile()
     {

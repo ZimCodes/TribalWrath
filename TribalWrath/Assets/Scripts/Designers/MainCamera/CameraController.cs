@@ -25,8 +25,16 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-
-        cameraRotate.targetObject = ModelSwitch.currentModel;
+        #region If No ModelSwitch Script is attached to scene
+        if (ModelSwitch.currentModel == null)
+        {
+            cameraRotate.targetObject =  target;
+        }
+        else
+        {
+            cameraRotate.targetObject = ModelSwitch.currentModel;
+        }
+        #endregion
         if (follow)
         {
             cameraFollow.LateUpdate(this.transform);

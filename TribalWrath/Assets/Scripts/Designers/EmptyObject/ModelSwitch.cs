@@ -5,7 +5,7 @@ using UnityEngine;
 public class ModelSwitch : MonoBehaviour {
     public static GameObject currentModel { get; private set; }
 
-    [Tooltip("Element0 == High Jump Model,\nElement1 == AcidSpit Model,\nElement2 == Owl Sight Model, etc.")]
+    [Tooltip("Element0 == High Jump Model,\nElement1 == AcidSpit Model,\nElement2 == Owl Sight Model,\nElement3 == Mouse Shrink Model")]
     public List<GameObject> models = new List<GameObject>();
     [Tooltip("Normal Player Model")]
     public GameObject defaultModel;
@@ -38,10 +38,15 @@ public class ModelSwitch : MonoBehaviour {
         {
             SwitchAbilityModels(models[2]);
         }
+        else if (Abilities.Ability == AbilityState.MouseShrink && currentModel != models[3])
+        {
+            SwitchAbilityModels(models[3]);
+        }
         else if(Abilities.Ability == AbilityState.Normal && currentModel != defaultModel)
         {
             SwitchAbilityModels(defaultModel);
         }
+        
     }
     private void SwitchAbilityModels(GameObject _modeltoswitchto)
     {

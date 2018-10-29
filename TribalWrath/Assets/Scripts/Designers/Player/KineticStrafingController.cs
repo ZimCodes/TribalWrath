@@ -6,12 +6,15 @@ public class KineticStrafingController : MonoBehaviour {
     KineticStrafing strafing;
     [Tooltip("How fast to move an object")]
     public float moveSpeed = 1;
-
+    Rigidbody rigidbody;
     // Use this for initialization
     void Start () {
         strafing = new KineticStrafing();
         strafing.Direction = Vector3.zero;
-	}
+
+        rigidbody = GetComponent<Rigidbody>();
+        rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,6 +26,7 @@ public class KineticStrafingController : MonoBehaviour {
 
         this.strafing.UpdateMovement(gameObject);
 	}
+
     public void UpdateDirectionInput()
     {
         strafing.Direction = Vector3.zero;
