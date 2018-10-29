@@ -302,6 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Designers\EmptyObject\AbilityBtnWheel.cs" />
+    <Compile Include="Assets\Scripts\Designers\EmptyObject\CursorUtility.cs" />
     <Compile Include="Assets\Scripts\Designers\EmptyObject\ModelSwitch.cs" />
     <Compile Include="Assets\Scripts\Designers\MainCamera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Designers\MainCamera\OwlSightController.cs" />
