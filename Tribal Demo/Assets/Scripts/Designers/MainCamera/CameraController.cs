@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
     public GameObject target;
     public float CameraRotationXSpeed = 5.0f;
     public float CameraRotationYSpeed = 1.0f;
-    public bool lookAtObject = true, ActivateRotation = true, follow = true, verticalcontrol = true;
+    public bool lookAtObject = true, ActivateRotation = true, follow = true, verticalcontrol = true, invertedY = false;
     // Use this for initialization
     void Start () {
         cameraRotate = new CameraRotateObject(target);
@@ -25,8 +25,17 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-
-        cameraRotate.targetObject = ModelSwitch.currentModel;
+        #region If No ModelSwitch Script is attached to scene
+        if (ModelSwitch.currentModel == null)
+        {
+            cameraRotate.targetObject =  target;
+        }
+        else
+        {
+            cameraRotate.targetObject = ModelSwitch.currentModel;
+        }
+        #endregion
+        Debug.Log(AbilityBtnWheel.AbilityWheelState);
         if (follow)
         {
             cameraFollow.LateUpdate(this.transform);
@@ -39,10 +48,17 @@ public class CameraController : MonoBehaviour {
             cameraRotate.RotateDirection = Input.GetAxis("Mouse X");
             cameraRotate.LateUpdate(this.transform);
         }
-        if (verticalcontrol)
+        if (verticalcontrol && AbilityBtnWheel.AbilityWheelState == AbilityWheelUIState.Hidden)
         {
             cameraRotVertical.CameraRotationSpeed = CameraRotationYSpeed;
-            cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y");
+            if (invertedY)
+            {
+                cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y");
+            }
+            else
+            {
+                cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y") * -1;
+            }
             cameraRotVertical.LateUpdate(this.transform);
         }
         if (lookAtObject)
