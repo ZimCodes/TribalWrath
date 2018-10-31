@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4738066356497528}
-  - component: {fileID: 114991161444284980}
   - component: {fileID: 114187858493457554}
+  - component: {fileID: 114660710967099236}
   m_Layer: 0
   m_Name: Utility Manager
   m_TagString: Untagged
@@ -57,7 +57,7 @@ MonoBehaviour:
   - {fileID: 1867342982026118, guid: 288850b1984b30e4e873f3db456f50a7, type: 2}
   - {fileID: 100002, guid: 4de90056cf3ca4b47be8f836d98418ba, type: 3}
   defaultModel: {fileID: 0}
---- !u!114 &114991161444284980
+--- !u!114 &114660710967099236
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,6 +65,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1901375831730536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af573dd834eaa241804ee4442bb01d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bb42f0f8bca129498d671b21ec72d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highJumpBtn: {fileID: 0}
+  acidSpitBtn: {fileID: 0}
+  owlSightBtn: {fileID: 0}
+  mouseShrinkBtn: {fileID: 0}
+  normalBtn: {fileID: 0}
+  UIForWheel: {fileID: 0}

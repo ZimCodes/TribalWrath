@@ -47,7 +47,7 @@ public class CameraController : MonoBehaviour {
             cameraRotate.RotateDirection = Input.GetAxis("Mouse X");
             cameraRotate.LateUpdate(this.transform);
         }
-        if (verticalcontrol)
+        if (verticalcontrol && AbilityBtnWheel.AbilityWheelState == AbilityWheelUIState.Hidden)
         {
             cameraRotVertical.CameraRotationSpeed = CameraRotationYSpeed;
             cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y");

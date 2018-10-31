@@ -34,6 +34,10 @@ public class AbilityBtnWheel : MonoBehaviour {
         normalBtn.onClick.AddListener(NormalAbility_ButtonClick);
         mouseShrinkBtn.onClick.AddListener(MouseShrink_ButtonClick);
     }
+    private void OnGUI()
+    {
+        DisableCurrentButton();
+    }
     /// <summary>
     /// Disables the Ability Wheel Canvas On Start
     /// </summary>
@@ -69,6 +73,7 @@ public class AbilityBtnWheel : MonoBehaviour {
     private void HighJumpAbility_ButtonClick()
     {
         Abilities.Ability = AbilityState.HighJump;
+        
     }
     private void AcidSpitAbility_ButtonClick()
     {
@@ -85,5 +90,34 @@ public class AbilityBtnWheel : MonoBehaviour {
     private void MouseShrink_ButtonClick()
     {
         Abilities.Ability = AbilityState.MouseShrink;
+    }
+    /// <summary>
+    /// Disables the button associated with the current selected ability
+    /// </summary>
+    private void DisableCurrentButton()
+    {
+        switch (Abilities.Ability)
+        {
+            case AbilityState.HighJump:
+                highJumpBtn.interactable = false;
+                acidSpitBtn.interactable = owlSightBtn.interactable = mouseShrinkBtn.interactable = normalBtn.interactable = true;
+                break;
+            case AbilityState.AcidSpit:
+                acidSpitBtn.interactable = false;
+                highJumpBtn.interactable = owlSightBtn.interactable = mouseShrinkBtn.interactable = normalBtn.interactable = true;
+                break;
+            case AbilityState.OwlSight:
+                owlSightBtn.interactable = false;
+                highJumpBtn.interactable = acidSpitBtn.interactable = mouseShrinkBtn.interactable = normalBtn.interactable = true;
+                break;
+            case AbilityState.MouseShrink:
+                mouseShrinkBtn.interactable = false;
+                highJumpBtn.interactable = acidSpitBtn.interactable = owlSightBtn.interactable = normalBtn.interactable = true;
+                break;
+            case AbilityState.Normal:
+                normalBtn.interactable = false;
+                highJumpBtn.interactable = acidSpitBtn.interactable = owlSightBtn.interactable = mouseShrinkBtn.interactable = true;
+                break;
+        }
     }
 }
