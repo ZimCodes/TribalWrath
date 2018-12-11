@@ -11,6 +11,55 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1867342982026118}
   m_IsPrefabParent: 1
+--- !u!1 &1484634728163212
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4121527825055302}
+  - component: {fileID: 33741745314147970}
+  - component: {fileID: 23837311754441438}
+  m_Layer: 9
+  m_Name: lizardboy1:pSphere1_lizardboy1:pSphere1_1001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1628761917010502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4682819413910576}
+  m_Layer: 9
+  m_Name: Liz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1645493336904190
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4558404123211778}
+  - component: {fileID: 33761922513069558}
+  - component: {fileID: 23859338420035898}
+  m_Layer: 9
+  m_Name: lizardboy1:pSphere1_lizardboy1:pSphere1_1011
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1679200268514918
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,13 +70,13 @@ GameObject:
   - component: {fileID: 4223744507919566}
   - component: {fileID: 33323105742065088}
   - component: {fileID: 23318107116814972}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lizard_Frog_23:ZBrushPolyMesh3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1867342982026118
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,13 +91,26 @@ GameObject:
   - component: {fileID: 54511201219922252}
   - component: {fileID: 65924814757802554}
   - component: {fileID: 114919883382856480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Acid Lizard (player)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4121527825055302
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484634728163212}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4682819413910576}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4223744507919566
 Transform:
   m_ObjectHideFlags: 1
@@ -60,6 +122,34 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4710296085305926}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4558404123211778
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1645493336904190}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4682819413910576}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4682819413910576
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1628761917010502}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.011898675, y: 0.046666857, z: -3.017109}
+  m_LocalScale: {x: 1.4499236, y: 1.4499233, z: 1.4499233}
+  m_Children:
+  - {fileID: 4121527825055302}
+  - {fileID: 4558404123211778}
+  m_Father: {fileID: 4710296085305926}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4710296085305926
@@ -69,9 +159,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1867342982026118}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0549469, y: 0, z: -4.4412994}
+  m_LocalPosition: {x: -1.0932539, y: -0.875, z: -0.8181608}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
+  - {fileID: 4682819413910576}
   - {fileID: 4223744507919566}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -91,7 +182,77 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 857597b803d28ec4aa3dc0e41cf1b64a, type: 3}
+  - {fileID: 2100000, guid: 608b1e24c5c113c4d86e41ee29947bd9, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23837311754441438
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484634728163212}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: f8bd6623a2a763946bc3a0ff31c010eb, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23859338420035898
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1645493336904190}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 3709fcb14c3a0e442beb394ca4d80831, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,6 +279,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1679200268514918}
   m_Mesh: {fileID: 4300000, guid: 857597b803d28ec4aa3dc0e41cf1b64a, type: 3}
+--- !u!33 &33741745314147970
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484634728163212}
+  m_Mesh: {fileID: 4300000, guid: 4353e8827b00d8541bb5b64a7b9a14c4, type: 3}
+--- !u!33 &33761922513069558
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1645493336904190}
+  m_Mesh: {fileID: 4300002, guid: 4353e8827b00d8541bb5b64a7b9a14c4, type: 3}
 --- !u!54 &54511201219922252
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -172,7 +347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileName: Acid Spit
   projectile: {fileID: 1928741295262556, guid: 287e7db281da66f41bd2d3caeed35a1e, type: 2}
-  AcidSpeed: 500
+  AcidSpeed: 1000
   AcidCooldown: 3
   verticalStartForProjectile: 1
 --- !u!114 &114785985419395252
@@ -199,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileName: Acid Spit
-  projectile: {fileID: 1928741295262556, guid: 287e7db281da66f41bd2d3caeed35a1e, type: 2}
+  projectile: {fileID: 1712865466351104, guid: eae83794a11937349b86ddbc30b2aa0a, type: 2}
   AcidSpeed: 300
   AcidCooldown: 1.34
   verticalStartForProjectile: 0.151

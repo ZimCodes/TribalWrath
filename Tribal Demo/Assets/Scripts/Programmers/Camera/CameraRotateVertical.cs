@@ -10,7 +10,7 @@ public class CameraRotateVertical : CameraRotate
     public override void Start(Transform cameraTransform)
     {
         AxisToRotateAbout = Vector3.right;
-        base.Start(cameraTransform);
+        
     }
     public override void LateUpdate(Transform cameraTransform)
     {
@@ -22,9 +22,4 @@ public class CameraRotateVertical : CameraRotate
         cameraTransform.Rotate(camTurnAngle.eulerAngles);
 
     }
-    //protected override void RotationFormula()
-    //{
-    //    base.RotationFormula();
-    //    MaintainCameraDistanceWhileRotating();
-    //}
 }
