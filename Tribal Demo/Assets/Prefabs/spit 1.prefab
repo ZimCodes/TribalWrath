@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1928741295262556}
   m_LocalRotation: {x: -0, y: -0.7192259, z: -0, w: 0.69477636}
-  m_LocalPosition: {x: -0.49035868, y: 1.10704, z: -1.7839094}
+  m_LocalPosition: {x: 8.943842, y: -5.2684264, z: -7.9097958}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0172c16659612374798aaea54966bc66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71fe596ba3cb3174a9a279f2efb4ac9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToCollideWithAcidSpit: Enemy
+  objectToCollideWithAcidSpit: Melt Wall
 --- !u!135 &135896961198964042
 SphereCollider:
   m_ObjectHideFlags: 1

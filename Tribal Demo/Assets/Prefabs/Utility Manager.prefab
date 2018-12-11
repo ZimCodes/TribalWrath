@@ -55,7 +55,7 @@ MonoBehaviour:
   models:
   - {fileID: 1494335651274488, guid: beb34dcb1f3d13b40b8e805ae05954e3, type: 2}
   - {fileID: 1867342982026118, guid: 288850b1984b30e4e873f3db456f50a7, type: 2}
-  - {fileID: 100002, guid: 4de90056cf3ca4b47be8f836d98418ba, type: 3}
+  - {fileID: 1152729778649700, guid: b5e17c8bd522f06458ed28d05259e7b7, type: 2}
   defaultModel: {fileID: 0}
 --- !u!114 &114660710967099236
 MonoBehaviour:

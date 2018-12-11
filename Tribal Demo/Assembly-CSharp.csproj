@@ -61,22 +61,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Designers\EmptyObject\AbilitySwitch.cs" />
+    <Compile Include="Assets\Owl Eyes\InvisibleBlock.cs" />
+    <Compile Include="Assets\Owl Eyes\OwlSight.cs" />
+    <Compile Include="Assets\Owl Eyes\OwlVisionOrb.cs" />
+    <Compile Include="Assets\Scripts\Designers\DestroyBarrier.cs" />
+    <Compile Include="Assets\Scripts\Designers\EmptyObject\AbilityBtnWheel.cs" />
+    <Compile Include="Assets\Scripts\Designers\EmptyObject\CursorUtility.cs" />
     <Compile Include="Assets\Scripts\Designers\EmptyObject\ModelSwitch.cs" />
+    <Compile Include="Assets\Scripts\Designers\ExitDemo.cs" />
     <Compile Include="Assets\Scripts\Designers\MainCamera\CameraController.cs" />
     <Compile Include="Assets\Scripts\Designers\MainCamera\OwlSightController.cs" />
     <Compile Include="Assets\Scripts\Designers\Player\AcidSpitController.cs" />
     <Compile Include="Assets\Scripts\Designers\Player\JumpController.cs" />
     <Compile Include="Assets\Scripts\Designers\Player\KineticStrafingController.cs" />
+    <Compile Include="Assets\Scripts\Designers\Player\MouseShrinkController.cs" />
     <Compile Include="Assets\Scripts\Designers\Projectile\TriggerAcidSpit.cs" />
     <Compile Include="Assets\Scripts\Main Menu\PlayButton.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\QuitButton.cs" />
     <Compile Include="Assets\Scripts\Main Menu\StartButtonPress.cs" />
     <Compile Include="Assets\Scripts\Programmers\Abilities\Abilities.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Abilities\AcidSpit\AcidSpit.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Abilities\AcidSpit\AcidSpitTest.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Abilities\AcidSpit\IObjectPoolItem.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Abilities\AcidSpit\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\Programmers\Abilities\IAbilities.cs" />
-    <Compile Include="Assets\Scripts\Programmers\AcidSpit\AcidSpit.cs" />
-    <Compile Include="Assets\Scripts\Programmers\AcidSpit\AcidSpitTest.cs" />
-    <Compile Include="Assets\Scripts\Programmers\AcidSpit\IObjectPoolItem.cs" />
-    <Compile Include="Assets\Scripts\Programmers\AcidSpit\ObjectPooler.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Abilities\MouseShrink.cs" />
     <Compile Include="Assets\Scripts\Programmers\Camera\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Programmers\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Programmers\Camera\CameraRotate.cs" />
@@ -84,13 +93,12 @@
     <Compile Include="Assets\Scripts\Programmers\Camera\CameraRotateObject.cs" />
     <Compile Include="Assets\Scripts\Programmers\Camera\CameraRotateVertical.cs" />
     <Compile Include="Assets\Scripts\Programmers\Camera\ICameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Controllers\AbilitySwitch.cs" />
     <Compile Include="Assets\Scripts\Programmers\Controllers\AcidSpitPooler.cs" />
     <Compile Include="Assets\Scripts\Programmers\Controllers\CameraRotateAndFollowObjectController.cs" />
     <Compile Include="Assets\Scripts\Programmers\Controllers\PhysicsStrafing.cs" />
     <Compile Include="Assets\Scripts\Programmers\Controllers\SingleCameraController.cs" />
     <Compile Include="Assets\Scripts\Programmers\Light\LightSwitch.cs" />
-    <Compile Include="Assets\Scripts\Programmers\MouseShrink.cs" />
-    <Compile Include="Assets\Scripts\Programmers\MouseShrinkController.cs" />
     <Compile Include="Assets\Scripts\Programmers\Movement\IMovement.cs" />
     <Compile Include="Assets\Scripts\Programmers\Movement\Jumping.cs" />
     <Compile Include="Assets\Scripts\Programmers\Movement\KineticStrafing.cs" />
@@ -105,10 +113,10 @@
     <None Include="Assets\Scripts\UML\Move Diagram.cd" />
     <None Include="Assets\Scripts\UML\AbilityDiagram.cd" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>E:/Large Team/Tribal Demo/Tribal Demo/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>E:/Large Team/RuPauls/Tribal Prototype/RuPaulsBestFriendRace-master/Tribal Demo/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/Large Team/Tribal Demo/Tribal Demo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/Large Team/RuPauls/Tribal Prototype/RuPaulsBestFriendRace-master/Tribal Demo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

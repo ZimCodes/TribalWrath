@@ -27,7 +27,7 @@ public class JumpController : MonoBehaviour {
 	}
     private void UpdateJumpInput()
     {
-        if (KeyboardInputUtil.KeyWasPressed(KeyCode.Space) && !jump.isJumping)
+        if (Input.GetKeyDown(KeyCode.Space) && !jump.isJumping)
         {
             jump.Direction = Vector3.up;
             Debug.Log("Jumping!");
