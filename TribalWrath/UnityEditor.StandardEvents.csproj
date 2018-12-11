@@ -351,9 +351,9 @@
     <Compile Include="Packages\com.unity.standardevents\Editor\Importer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Scripts\UML\AbilityDiagram.cd" />
-    <None Include="Assets\Scripts\UML\CameraDiagram.cd" />
-    <None Include="Assets\Scripts\UML\Move Diagram.cd" />
+    <None Include="Assets\Scenes\Scripts\UML\AbilityDiagram.cd" />
+    <None Include="Assets\Scenes\Scripts\UML\CameraDiagram.cd" />
+    <None Include="Assets\Scenes\Scripts\UML\Move Diagram.cd" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
