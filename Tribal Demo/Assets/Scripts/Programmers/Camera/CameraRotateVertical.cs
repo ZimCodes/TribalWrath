@@ -3,7 +3,7 @@
 public class CameraRotateVertical : CameraRotate
 {
     public float VerticalRotation;
-    public CameraRotateVertical(GameObject _target) : base(_target)
+    public CameraRotateVertical(GameObject _target, float _movecamerapercent = .347f, string _nameoflayertoignore = "Player") : base(_target,_movecamerapercent,_nameoflayertoignore)
     {
         
     }

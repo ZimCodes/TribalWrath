@@ -8,7 +8,7 @@ public class CameraRotate : CameraMovement {
     protected Vector3 AxisToRotateAbout;
 
     protected Quaternion camTurnAngle;
-    public CameraRotate(GameObject _target): base(_target)
+    public CameraRotate(GameObject _target, float _movecamerapercent = .347f, string _nameoflayertoignore = "Player") : base(_target,_movecamerapercent,_nameoflayertoignore)
     {
         AxisToRotateAbout = Vector3.up;
     }
