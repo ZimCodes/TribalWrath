@@ -9,14 +9,20 @@ public class CameraController : MonoBehaviour {
     CameraRotateVertical cameraRotVertical;
 
     public GameObject target;
+    [Tooltip("Camera Rotation Speed on X-Axis")]
     public float CameraRotationXSpeed = 5.0f;
+    [Tooltip("Camera Rotation Speed on Y-Axis")]
     public float CameraRotationYSpeed = 1.0f;
+    [SerializeField,Range(0,1),Tooltip("Percent to move camera during collision w/ another object(No Runtime Changes!)")]
+    private float cameraCollisionMovePercent = .347f;
+    [SerializeField, Tooltip("Name of layer target is on; [Target must NOT be on layers 0-8]")]
+    private string targetLayerName = "Player";
     public bool lookAtObject = true, ActivateRotation = true, follow = true, verticalcontrol = true, InvertY = false;
     // Use this for initialization
     void Start () {
-        cameraRotate = new CameraRotateObject(target);
-        cameraFollow = new CameraFollow(target);
-        cameraRotVertical = new CameraRotateVertical(target);
+        cameraRotate = new CameraRotateObject(target,cameraCollisionMovePercent,targetLayerName);
+        cameraFollow = new CameraFollow(target, cameraCollisionMovePercent, targetLayerName);
+        cameraRotVertical = new CameraRotateVertical(target, cameraCollisionMovePercent, targetLayerName);
 
         cameraFollow.Start(this.transform);
         cameraRotate.Start(this.transform);

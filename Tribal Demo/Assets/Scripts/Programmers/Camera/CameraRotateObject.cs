@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraRotateObject : CameraRotate {
     public float targetRotationSpeed;
-    public CameraRotateObject(GameObject _target) : base(_target)
+    public CameraRotateObject(GameObject _target, float _movecamerapercent = .347f, string _nameoflayertoignore = "Player") : base(_target,_movecamerapercent,_nameoflayertoignore)
     {
 
     }

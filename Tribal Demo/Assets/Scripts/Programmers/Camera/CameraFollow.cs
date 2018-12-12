@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraFollow : CameraMovement { 
 
-    public CameraFollow(GameObject _target) : base(_target)
+    public CameraFollow(GameObject _target, float _movecamerapercent = .347f, string _nameoflayertoignore = "Player") : base(_target,_movecamerapercent,_nameoflayertoignore)
     {
 
     }
