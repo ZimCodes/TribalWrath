@@ -308,9 +308,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MainMenuSwitch.cs" />
     <Compile Include="Assets\Owl Eyes\InvisibleBlock.cs" />
     <Compile Include="Assets\Owl Eyes\OwlSight.cs" />
     <Compile Include="Assets\Owl Eyes\OwlVisionOrb.cs" />
+    <Compile Include="Assets\Scripts\Designers\AbilityWheelBtns\AcidSpitBtn.cs" />
+    <Compile Include="Assets\Scripts\Designers\AbilityWheelBtns\HighJumpBtn.cs" />
+    <Compile Include="Assets\Scripts\Designers\AbilityWheelBtns\NormalBtn.cs" />
+    <Compile Include="Assets\Scripts\Designers\AbilityWheelBtns\OwlSightBtn.cs" />
     <Compile Include="Assets\Scripts\Designers\DestroyBarrier.cs" />
     <Compile Include="Assets\Scripts\Designers\EmptyObject\AbilityBtnWheel.cs" />
     <Compile Include="Assets\Scripts\Designers\EmptyObject\CursorUtility.cs" />
@@ -350,8 +355,10 @@
     <Compile Include="Assets\Scripts\Programmers\Movement\Jumping.cs" />
     <Compile Include="Assets\Scripts\Programmers\Movement\KineticStrafing.cs" />
     <Compile Include="Assets\Scripts\Programmers\Movement\Strafing.cs" />
+    <Compile Include="Assets\Scripts\Programmers\Util\InputUtil.cs" />
     <Compile Include="Assets\Scripts\Programmers\Util\KeyboardInputUtil.cs" />
     <Compile Include="Assets\Scripts\Programmers\Util\Timer.cs" />
+    <Compile Include="Assets\Scripts\SetMenuState.cs" />
     <Compile Include="Assets\Scripts\TriggerPickups\JumpOrb.cs" />
     <Compile Include="Assets\Scripts\TriggerPickups\LightOrb.cs" />
     <Compile Include="Assets\Scripts\TriggerPickups\ObjectRotation.cs" />

@@ -9,6 +9,7 @@ public class PlayButton : MonoBehaviour {
 
 	public void PlayButtonPress()
     {
+        ExitDemo.endlevel = false;
         SceneManager.LoadScene(LeveltoLoad);
     }
 }

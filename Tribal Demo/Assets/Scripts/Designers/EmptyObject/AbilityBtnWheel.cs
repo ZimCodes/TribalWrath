@@ -28,11 +28,6 @@ public class AbilityBtnWheel : MonoBehaviour {
         normalBtn.GetComponent<Button>();
         mouseShrinkBtn.GetComponent<Button>();
 
-        highJumpBtn.onClick.AddListener(HighJumpAbility_ButtonClick);
-        acidSpitBtn.onClick.AddListener(AcidSpitAbility_ButtonClick);
-        owlSightBtn.onClick.AddListener(OwlSightAbility_ButtonClick);
-        normalBtn.onClick.AddListener(NormalAbility_ButtonClick);
-        mouseShrinkBtn.onClick.AddListener(MouseShrink_ButtonClick);
     }
     private void OnGUI()
     {
@@ -55,41 +50,17 @@ public class AbilityBtnWheel : MonoBehaviour {
     }
     private void WheelActivation()
     {
-        if (KeyboardInputUtil.KeyWasPressed(KeyCode.Tab))
+        if (InputUtil.IsHoldingKey(KeyCode.Tab))
         {
-            if (UIForWheel.isActiveAndEnabled)
-            {
-                UIForWheel.enabled = false;
-                abilitywheelstate = AbilityWheelUIState.Hidden;
-            }
-            else
-            {
-                UIForWheel.enabled = true;
-                abilitywheelstate = AbilityWheelUIState.Visible;
-            }
+            UIForWheel.enabled = true;
+            abilitywheelstate = AbilityWheelUIState.Visible;
+            
         }
-    }
-
-    private void HighJumpAbility_ButtonClick()
-    {
-        Abilities.Ability = AbilityState.HighJump;
-        
-    }
-    private void AcidSpitAbility_ButtonClick()
-    {
-        Abilities.Ability = AbilityState.AcidSpit;
-    }
-    private void OwlSightAbility_ButtonClick()
-    {
-        Abilities.Ability = AbilityState.OwlSight;
-    }
-    private void NormalAbility_ButtonClick()
-    {
-        Abilities.Ability = AbilityState.Normal;
-    }
-    private void MouseShrink_ButtonClick()
-    {
-        Abilities.Ability = AbilityState.MouseShrink;
+        else
+        {
+            UIForWheel.enabled = false;
+            abilitywheelstate = AbilityWheelUIState.Hidden;
+        }
     }
     /// <summary>
     /// Disables the button associated with the current selected ability

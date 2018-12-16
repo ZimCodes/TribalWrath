@@ -3029,7 +3029,7 @@ GameObject:
   - component: {fileID: 1863421469}
   - component: {fileID: 1863421466}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Press Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3101,7 +3101,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartButton
+          m_StringArgument: StartShow
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1754520981}
@@ -3112,7 +3112,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CreditsButton
+          m_StringArgument: CreditsShow
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 804969643}
@@ -3123,7 +3123,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: QuitButton
+          m_StringArgument: QuitShow
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1146535988}
@@ -3151,6 +3151,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1863421464}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1943903287}
+        m_MethodName: SetMainMenuState
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3351,6 +3362,8 @@ GameObject:
   - component: {fileID: 1943903285}
   - component: {fileID: 1943903284}
   - component: {fileID: 1943903286}
+  - component: {fileID: 1943903288}
+  - component: {fileID: 1943903287}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -3394,6 +3407,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af1523ee5766574c91dd6e9355d3864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1943903287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943903283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68990ba3f77797c40998f4e126181360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1943903288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943903283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351672c1ed8e5da4d80400bcedc0472c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startAnim: {fileID: 1288598229}
+  creditAnim: {fileID: 1754520981}
+  quitAnim: {fileID: 804969643}
+  chestAnim: {fileID: 1146535988}
+  cameraAnim: {fileID: 446994957}
+  MainMenuButton: {fileID: 1863421466}
 --- !u!1 &1984156944
 GameObject:
   m_ObjectHideFlags: 0
