@@ -11,7 +11,11 @@ public class CursorUtility : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (AbilityBtnWheel.AbilityWheelState == AbilityWheelUIState.Visible)
+        if (ExitDemo.endlevel)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else if (AbilityBtnWheel.AbilityWheelState == AbilityWheelUIState.Visible)
         {
             Cursor.lockState = CursorLockMode.None;
         }

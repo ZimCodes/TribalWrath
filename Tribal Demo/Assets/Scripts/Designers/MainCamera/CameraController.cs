@@ -38,34 +38,41 @@ public class CameraController : MonoBehaviour {
         }
         else
         {
+            cameraFollow.targetObject = ModelSwitch.currentModel;
             cameraRotate.targetObject = ModelSwitch.currentModel;
+            cameraRotVertical.targetObject = ModelSwitch.currentModel;
         }
         #endregion
         if (follow)
         {
             cameraFollow.LateUpdate(this.transform);
         }
-        if (ActivateRotation)
+        if (AbilityBtnWheel.AbilityWheelState == AbilityWheelUIState.Hidden)
         {
-            //For Designers
-            cameraRotate.CameraRotationSpeed = CameraRotationXSpeed;
-            cameraRotate.targetRotationSpeed = CameraRotationXSpeed;
-            cameraRotate.RotateDirection = Input.GetAxis("Mouse X");
-            cameraRotate.LateUpdate(this.transform);
-        }
-        if (verticalcontrol && AbilityBtnWheel.AbilityWheelState == AbilityWheelUIState.Hidden)
-        {
-            cameraRotVertical.CameraRotationSpeed = CameraRotationYSpeed;
-            cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y");
-            cameraRotVertical.VerticalRotation = (InvertY) ? Input.GetAxis("Mouse Y") : Input.GetAxis("Mouse Y") * -1;
+            
+            if (ActivateRotation)
+            {
+                //For Designers
+                cameraRotate.CameraRotationSpeed = CameraRotationXSpeed;
+                cameraRotate.targetRotationSpeed = CameraRotationXSpeed;
+                cameraRotate.RotateDirection = Input.GetAxis("Mouse X");
+                cameraRotate.LateUpdate(this.transform);
+            }
+            if (verticalcontrol)
+            {
+                cameraRotVertical.CameraRotationSpeed = CameraRotationYSpeed;
+                cameraRotVertical.VerticalRotation = Input.GetAxis("Mouse Y");
+                cameraRotVertical.VerticalRotation = (InvertY) ? Input.GetAxis("Mouse Y") : Input.GetAxis("Mouse Y") * -1;
 
 
-            cameraRotVertical.LateUpdate(this.transform);
+                cameraRotVertical.LateUpdate(this.transform);
+            }
+            if (lookAtObject)
+            {
+                cameraRotate.LookAtObject(this.transform);
+            }
         }
-        if (lookAtObject)
-        {
-            cameraRotate.LookAtObject(this.transform);
-        }
+        
         
 
     }
