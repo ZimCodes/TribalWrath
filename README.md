@@ -1,2 +1,2 @@
-# RuPaulsBestFriendRace
+# Tribal Wrath
 Our Demo Property 
