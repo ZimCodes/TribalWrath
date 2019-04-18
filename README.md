@@ -1,2 +1,2 @@
-# Tribal Wrath
+# Tribal Wrath Demo
 Our Demo Property 
